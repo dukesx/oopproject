@@ -1,4 +1,4 @@
-﻿Build started 11/29/2013 4:42:35 PM.
+﻿Build started 11/29/2013 6:30:14 PM.
      1>Project "c:\Users\DUKES\documents\visual studio 2010\Projects\projectoop\projectoop\projectoop.vcxproj" on node 2 (rebuild target(s)).
      1>_PrepareForClean:
          Deleting file "Debug\projectoop.lastbuildstate".
@@ -8,9 +8,8 @@
          E:\VS2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt customer.cpp info.cpp
          info.cpp
          customer.cpp
-     1>c:\users\dukes\documents\visual studio 2010\projects\projectoop\projectoop\customer.cpp(55): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+     1>c:\users\dukes\documents\visual studio 2010\projects\projectoop\projectoop\customer.cpp(93): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
                  e:\vs2010\vc\include\conio.h(128) : see declaration of 'getch'
-     1>c:\users\dukes\documents\visual studio 2010\projects\projectoop\projectoop\customer.cpp(37): warning C4101: 'a' : unreferenced local variable
          Generating Code...
        Link:
          E:\VS2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\dukes\documents\visual studio 2010\Projects\projectoop\Debug\projectoop.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\projectoop.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"c:\users\dukes\documents\visual studio 2010\Projects\projectoop\Debug\projectoop.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\dukes\documents\visual studio 2010\Projects\projectoop\Debug\projectoop.lib" /MACHINE:X86 Debug\customer.obj
@@ -26,4 +25,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.89
+Time Elapsed 00:00:00.92

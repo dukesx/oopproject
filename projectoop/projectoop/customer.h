@@ -11,5 +11,6 @@ public:
 	void inputname();
 	void display();
 	customer operator==(customer);
+	void inputdestin();
 };
 
