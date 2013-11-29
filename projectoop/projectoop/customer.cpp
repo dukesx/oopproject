@@ -8,87 +8,160 @@ customer::customer(string c , int d , string e , string f):info(e,f)
 
 void customer::inputname()
 {
-cin>>name;
+getline(cin,name);
+getline(cin,name);
 }
 
 void customer::display()
 {
 	cout<<name<<endl;
+	cout<<destination<<endl;
+	cout<<ticketno<<endl;
 }
 
-customer customer::operator==(customer b)
+void customer::searchcustom(customer b)
 {
-	if ((name == b.name))
+	if (name == b.name)
 	{
+		int mm = rand() %1000;
 		cout<<" Match Found ! "<<endl;
-		cout<<b.name<<endl;
-		cout<<b.destination<<endl;
-	}
+		cout<<"Customer Name :"<<b.name<<endl;
+		cout<<"Customer Destination : "<<b.destination<<endl;
+		cout<<"Ticket No : "<<b.ticketno<<endl;
+
+		if(mm>60<500)
+		{
+			int ll = mm/60;
+			cout<<"Departure Time : "<<ll<<"Hours"<<endl;
+		}
+
+		else if(mm >500)
+		{
+			int lm = mm/3600;
+			cout<<"Departure Time : "<<lm<<"Hours"<<endl;
+		}
+		
 	else 
 	{
 		cout<< " No Match"<<endl;
 	}
-
-	return b;
+	}
 }
 
 void customer::inputdestin()
 {
-	int j;
-	cin>>destination;
+	getline(cin,destination);
 
 	if(destination == "peshawar")
 	{ 
-	   j = rand() %1000;
-		cout<<"ticket no is : \n "<<j<<endl;
+	   ticketno = rand() %1000;
+		cout<<"ticket no is : \n "<<ticketno<<endl;
+	}
+
+		else if(destination == "chakwal")
+	{ 
+	  ticketno = rand() %2000;
+	
+		cout<<"ticket no is : \n "<<ticketno<<endl;
+	}
+
+			else if(destination == "faisalabad")
+	{ 
+	   ticketno = rand() %3000;
+
+		cout<<"ticket no is : \n "<<ticketno<<endl;
+	}
+
+		else if(destination == "lahore")
+	{ 
+	   ticketno = rand() %4000;
+	  
+		cout<<"ticket no is : \n "<<ticketno<<endl;
 	}
 
 	else 
 	{
 		cout<<"error ! \n"<<endl;
 	}
+	}
+
+void customer::inputticket()
+{
+	cin>>ticketno;
 }
 
+void customer::checkticket(customer x[])
+{
+	for(int i=0 ; i<20;i++)
+	{
+	if(ticketno==x[i].ticketno)
+	{
+		cout<<"Customer Name : "<<x[i].name<<endl;
+		cout<<"Customer Destination :"<<x[i].destination<<endl;
+		cout<<"Customer Ticket No : "<<x[i].ticketno<<endl;
+		break;
+	}
+
+	}
+}
 
 void main()
 {
+	string xxd;
 	customer z[20],x;
-	int f=0;
-	do {
-
-	cout<< " press 1 for entering data \n"<<endl;
-	cout<< " press 2 for Searching data \n "<<endl;
+	int f=0,ID;
+	int i=0;
+	do 
+	{
+		           cout<< "               *****************************************************"<<endl;
+                   cout<< "               *****************************************************"<<endl;
+	               cout<< "                                  MAIN MENU          \n"<<endl;
+	               cout<< "                                1. Book A Ticket          "<<endl;
+	               cout<< "                                2. Search The Database    "<<endl;
+	               cout<< "                                3. Press 0 To Exit         "<<endl;
+	               cout<<"               ******************************************************"<<endl;
+				   cout<< "               ******************************************************"<<endl;
 	cin>>f;
 
+	if(i>20)
+	{
+		cout<<"Error ! Database Full"<<endl;
+	}
+
+	else
+	{
 	switch(f)
 	{
 case 1:
-	for(int i =0 ; i<1;i++)
-	{
-		cout<<"Enter Name \n"<<endl;
+		cout<<"Enter Your Name \n"<<endl;
 		z[i].inputname();
 		cout<<" Home :Islamabad \n"<<endl;
-		cout<<" Destinations : \n"<<endl;
+		cout<<" Enter Your Destination : \n"<<endl;
         cout<<"1.Peshawar \n"<<endl;
 		cout<<"2.Lahore \n"<<endl;
 		cout<<"3.Faisalabad \n"<<endl;
 		cout<<"4.Chakwal \n"<<endl;
 		cout<<"Enter Destination \n"<<endl;
 		z[i].inputdestin();	
-	}
+		i++;
 	break;
 
 case 2 :
-	cout<< " Enter Name \n"<<endl;
-	x.inputname();
-
-	for(int j=0;j<1;j++)
+	cout<< "Enter Ticket No"<<endl;
+	x.inputticket();
+	x.checkticket(z);
+break;
+	}
+	}
+	}
+while(f!=0);
+		
+	if ((f) == 0)
 	{
-		x==z[j];
+		cout<< " Exiting......... "<<endl;
+		cout<< " Dumping Dvar .... "<<endl;
+		cout<< " Freeeing Memory ...... "<<endl;
+		cout<< " Press Any Key To Exit ! "<<endl;
 	}
-	break;
-	}
-	}
-	while(f!=0);
 	getch();
 }

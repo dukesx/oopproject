@@ -2,15 +2,17 @@
 class customer :
 	public info
 {
-protected :
+public :
 	string destination;
 	int ticketno;
-public:
 	customer(){destination="",ticketno=0;}
 	customer(string,int,string,string);
 	void inputname();
 	void display();
+	void searchcustom(customer);
 	customer operator==(customer);
 	void inputdestin();
+	void inputticket();
+	void checkticket(customer[]);
 };
 
